@@ -1,0 +1,7 @@
+:8080 {
+    root * /app
+    route {
+        try_files {path} {path}/ /api/index.php
+        php_server
+    }
+}
