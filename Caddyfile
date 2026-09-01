@@ -1,0 +1,10 @@
+:{$PORT:80} {
+    # One front controller for every route. Using FrankenPHP's low-level
+    # php directive means POST/GET/FILE requests all reach the same PHP app.
+    route {
+        rewrite * /api/index.php
+        php {
+            root /app
+        }
+    }
+}
