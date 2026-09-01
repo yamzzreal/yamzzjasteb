@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#07111f"
+    >
+
+    <title>Login Admin • Yamzz Market</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="css/login.css">
+
+</head>
+
+<body>
+
+    <div class="login-background">
+
+        <div class="login-glow glow-one"></div>
+        <div class="login-glow glow-two"></div>
+
+    </div>
+
+
+    <main class="login-container">
+
+        <div class="login-card">
+
+            <div class="login-logo">
+
+                <i class="fa-solid fa-bolt"></i>
+
+            </div>
+
+
+            <div class="login-header">
+
+                <span class="login-badge">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    ADMIN AREA
+                </span>
+
+                <h1>
+                    Yamzz
+                    <span>Market</span>
+                </h1>
+
+                <p>
+                    Masuk ke dashboard administrator
+                </p>
+
+            </div>
+
+
+            <form id="loginForm">
+
+                <div class="login-field">
+
+                    <label>
+                        Username
+                    </label>
+
+                    <div class="input-wrap">
+
+                        <i class="fa-solid fa-user"></i>
+
+                        <input
+                            id="username"
+                            type="text"
+                            placeholder="Username admin"
+                            autocomplete="username"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="login-field">
+
+                    <label>
+                        Password
+                    </label>
+
+                    <div class="input-wrap">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input
+                            id="password"
+                            type="password"
+                            placeholder="Password admin"
+                            autocomplete="current-password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            id="togglePassword"
+                            class="password-toggle"
+                        >
+                            <i class="fa-solid fa-eye"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="loginError"
+                    class="login-error"
+                ></div>
+
+
+                <button
+                    type="submit"
+                    class="login-button"
+                >
+
+                    <i class="fa-solid fa-right-to-bracket"></i>
+
+                    Masuk ke Admin
+
+                </button>
+
+            </form>
+
+
+            <a
+                href="index.html"
+                class="back-store"
+            >
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Kembali ke Yamzz Market
+
+            </a>
+
+
+            <div class="login-security">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                Area khusus administrator
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script src="js/login.js"></script>
+
+</body>
+
+</html>

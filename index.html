@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Yamzz Market - JASTEB Marketplace"
+    >
+
+    <meta name="theme-color" content="#07111f">
+
+    <title>Yamzz Market</title>
+
+    <!-- Font -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         LOADER
+    ========================== -->
+    <div id="loader" class="loader">
+        <div class="loader-box">
+            <div class="loader-spinner"></div>
+            <span>Memuat toko...</span>
+        </div>
+    </div>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="index.html" class="brand">
+
+                <div class="brand-logo">
+                    <img
+                        id="navLogo"
+                        src=""
+                        alt="Logo"
+                    >
+                </div>
+
+                <div class="brand-info">
+                    <strong id="navStoreName">
+                        Yamzz Market
+                    </strong>
+
+                    <span>
+                        JASTEB STORE
+                    </span>
+                </div>
+
+            </a>
+
+
+            <nav class="nav-menu">
+
+                <a href="#home" class="nav-link active">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Home</span>
+                </a>
+
+                <a href="#produk" class="nav-link">
+                    <i class="fa-solid fa-box-open"></i>
+                    <span>Produk</span>
+                </a>
+
+                <a href="#tentang" class="nav-link">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span>Tentang</span>
+                </a>
+
+            </nav>
+
+
+            <div class="nav-actions">
+
+                <a
+                    id="navWhatsapp"
+                    href="#"
+                    target="_blank"
+                    class="nav-wa"
+                >
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>WhatsApp</span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+    <main>
+
+        <section id="home" class="hero">
+
+            <div class="hero-container">
+
+                <div class="hero-content">
+
+                    <div class="hero-badge">
+                        <span class="badge-dot"></span>
+                        <span id="heroTagline">
+                            JASTEB TERPERCAYA
+                        </span>
+                    </div>
+
+
+                    <h1 id="heroTitle">
+                        JASTEB
+                        <span>Yamzz Market</span>
+                    </h1>
+
+
+                    <p id="heroDescription">
+                        Tempat jual beli JASTEB dengan proses cepat,
+                        aman dan terpercaya.
+                    </p>
+
+
+                    <div class="hero-buttons">
+
+                        <a
+                            href="#produk"
+                            class="btn btn-primary"
+                        >
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            Lihat Produk
+                        </a>
+
+
+                        <a
+                            id="heroWhatsapp"
+                            href="#"
+                            target="_blank"
+                            class="btn btn-secondary"
+                        >
+                            <i class="fa-brands fa-whatsapp"></i>
+                            Hubungi Kami
+                        </a>
+
+                    </div>
+
+
+                    <div class="hero-stats">
+
+                        <div class="hero-stat">
+                            <strong id="totalProducts">
+                                0
+                            </strong>
+
+                            <span>Produk</span>
+                        </div>
+
+
+                        <div class="hero-stat">
+                            <strong>
+                                <i class="fa-solid fa-bolt"></i>
+                            </strong>
+
+                            <span>Fast Response</span>
+                        </div>
+
+
+                        <div class="hero-stat">
+                            <strong>
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </strong>
+
+                            <span>Aman</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Hero Visual -->
+                <div class="hero-visual">
+
+                    <div class="hero-glow"></div>
+
+                    <div class="hero-card">
+
+                        <div class="hero-card-top">
+
+                            <span class="online-dot"></span>
+
+                            <span>
+                                YAMZZ MARKET
+                            </span>
+
+                            <i class="fa-solid fa-ellipsis"></i>
+
+                        </div>
+
+
+                        <div class="hero-card-logo">
+
+                            <img
+                                id="heroLogo"
+                                src=""
+                                alt="Yamzz Market"
+                            >
+
+                        </div>
+
+
+                        <div class="hero-card-text">
+
+                            <strong>
+                                JASTEB MARKET
+                            </strong>
+
+                            <span>
+                                Cepat • Aman • Terpercaya
+                            </span>
+
+                        </div>
+
+
+                        <div class="hero-card-bottom">
+
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                                Verified Store
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-bolt"></i>
+                                Fast Response
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             BANNER
+        ========================== -->
+        <section class="banner-section">
+
+            <div class="container">
+
+                <div class="banner-card">
+
+                    <img
+                        id="storeBanner"
+                        src=""
+                        alt="Yamzz Market Banner"
+                    >
+
+                    <div class="banner-overlay"></div>
+
+                    <div class="banner-content">
+
+                        <span class="banner-label">
+                            <i class="fa-solid fa-star"></i>
+                            YAMZZ MARKET
+                        </span>
+
+                        <h2 id="bannerTitle">
+                            JASTEB TERBARU
+                        </h2>
+
+                        <p id="bannerDescription">
+                            Pilih produk yang kamu butuhkan
+                            dan lakukan pembelian dengan mudah.
+                        </p>
+
+                        <a
+                            href="#produk"
+                            class="btn btn-primary"
+                        >
+                            <i class="fa-solid fa-arrow-down"></i>
+                            Lihat Produk
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             PRODUCT SECTION
+        ========================== -->
+        <section
+            id="produk"
+            class="products-section"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            <i class="fa-solid fa-box"></i>
+                            MARKETPLACE
+                        </span>
+
+                        <h2>
+                            Pilih Produk
+                        </h2>
+
+                        <p>
+                            Pilih produk JASTEB yang tersedia
+                            di Yamzz Market.
+                        </p>
+
+                    </div>
+
+
+                    <div class="product-count">
+
+                        <i class="fa-solid fa-box-open"></i>
+
+                        <span id="productCount">
+                            0 Produk
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =========================
+                     CATEGORY
+                ========================== -->
+                <div class="categories">
+
+                    <button
+                        type="button"
+                        class="category-btn active"
+                        data-category="all"
+                    >
+                        <i class="fa-solid fa-border-all"></i>
+                        Semua
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="category-btn"
+                        data-category="jasteb"
+                    >
+                        <i class="fa-solid fa-bolt"></i>
+                        JASTEB
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="category-btn"
+                        data-category="sewa-jasteb"
+                    >
+                        <i class="fa-solid fa-key"></i>
+                        Sewa JASTEB
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="category-btn"
+                        data-category="pt-jasteb"
+                    >
+                        <i class="fa-solid fa-crown"></i>
+                        PT JASTEB
+                    </button>
+
+                </div>
+
+
+
+                <!-- =========================
+                     PRODUCTS
+                ========================== -->
+                <div
+                    id="productsContainer"
+                    class="products-grid"
+                >
+
+                    <!-- Produk akan dibuat otomatis oleh index.js -->
+
+                </div>
+
+
+                <!-- Empty State -->
+                <div
+                    id="emptyProducts"
+                    class="empty-state"
+                    style="display:none;"
+                >
+
+                    <div class="empty-icon">
+                        <i class="fa-solid fa-box-open"></i>
+                    </div>
+
+                    <h3>
+                        Produk Belum Tersedia
+                    </h3>
+
+                    <p>
+                        Saat ini belum ada produk yang tersedia.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             ABOUT
+        ========================== -->
+        <section
+            id="tentang"
+            class="about-section"
+        >
+
+            <div class="container">
+
+                <div class="about-grid">
+
+                    <div class="about-content">
+
+                        <span class="section-label">
+                            <i class="fa-solid fa-circle-info"></i>
+                            TENTANG STORE
+                        </span>
+
+
+                        <h2 id="aboutTitle">
+                            Tentang Yamzz Market
+                        </h2>
+
+
+                        <p id="aboutDescription">
+                            Yamzz Market merupakan marketplace
+                            yang menyediakan berbagai kebutuhan
+                            JASTEB dengan pelayanan cepat dan
+                            terpercaya.
+                        </p>
+
+
+                        <div class="about-features">
+
+                            <div class="feature-item">
+
+                                <div class="feature-icon">
+                                    <i class="fa-solid fa-shield-halved"></i>
+                                </div>
+
+                                <div>
+                                    <strong>
+                                        Aman
+                                    </strong>
+
+                                    <span>
+                                        Proses transaksi lebih aman
+                                    </span>
+                                </div>
+
+                            </div>
+
+
+                            <div class="feature-item">
+
+                                <div class="feature-icon">
+                                    <i class="fa-solid fa-bolt"></i>
+                                </div>
+
+                                <div>
+                                    <strong>
+                                        Cepat
+                                    </strong>
+
+                                    <span>
+                                        Proses pelayanan cepat
+                                    </span>
+                                </div>
+
+                            </div>
+
+
+                            <div class="feature-item">
+
+                                <div class="feature-icon">
+                                    <i class="fa-solid fa-headset"></i>
+                                </div>
+
+                                <div>
+                                    <strong>
+                                        Support
+                                    </strong>
+
+                                    <span>
+                                        Customer service siap membantu
+                                    </span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="about-card">
+
+                        <div class="about-card-icon">
+                            <i class="fa-solid fa-store"></i>
+                        </div>
+
+                        <h3>
+                            Yamzz Market
+                        </h3>
+
+                        <p>
+                            JASTEB Marketplace
+                        </p>
+
+
+                        <div class="about-status">
+
+                            <span class="online-dot"></span>
+
+                            <span>
+                                Store Online
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            id="aboutWhatsapp"
+                            href="#"
+                            target="_blank"
+                            class="btn btn-primary"
+                        >
+                            <i class="fa-brands fa-whatsapp"></i>
+                            Chat WhatsApp
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div class="footer-brand">
+
+                    <div class="footer-logo">
+
+                        <div class="brand-logo">
+                            <img
+                                id="footerLogo"
+                                src=""
+                                alt="Logo"
+                            >
+                        </div>
+
+                        <strong id="footerStoreName">
+                            Yamzz Market
+                        </strong>
+
+                    </div>
+
+
+                    <p id="footerDescription">
+                        JASTEB Marketplace terpercaya
+                        dengan pelayanan cepat dan aman.
+                    </p>
+
+
+                    <div class="social-links">
+
+                        <a
+                            id="socialTiktok"
+                            href="#"
+                            target="_blank"
+                            aria-label="TikTok"
+                        >
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+
+
+                        <a
+                            id="socialInstagram"
+                            href="#"
+                            target="_blank"
+                            aria-label="Instagram"
+                        >
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+
+                        <a
+                            id="socialYoutube"
+                            href="#"
+                            target="_blank"
+                            aria-label="YouTube"
+                        >
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+
+
+                        <a
+                            id="socialTelegram"
+                            href="#"
+                            target="_blank"
+                            aria-label="Telegram"
+                        >
+                            <i class="fa-brands fa-telegram"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="footer-column">
+
+                    <h4>
+                        Navigasi
+                    </h4>
+
+                    <a href="#home">
+                        Home
+                    </a>
+
+                    <a href="#produk">
+                        Produk
+                    </a>
+
+                    <a href="#tentang">
+                        Tentang Kami
+                    </a>
+
+                </div>
+
+
+
+                <div class="footer-column">
+
+                    <h4>
+                        Layanan
+                    </h4>
+
+                    <a href="#produk">
+                        JASTEB
+                    </a>
+
+                    <a href="#produk">
+                        Sewa JASTEB
+                    </a>
+
+                    <a href="#produk">
+                        PT JASTEB
+                    </a>
+
+                </div>
+
+
+
+                <div class="footer-column">
+
+                    <h4>
+                        Kontak
+                    </h4>
+
+                    <a
+                        id="footerWhatsapp"
+                        href="#"
+                        target="_blank"
+                    >
+                        <i class="fa-brands fa-whatsapp"></i>
+                        WhatsApp
+                    </a>
+
+                    <a
+                        id="footerEmail"
+                        href="#"
+                    >
+                        <i class="fa-solid fa-envelope"></i>
+                        Email
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="footer-bottom">
+
+                <span>
+                    © <span id="footerYear"></span>
+                    <span id="copyrightName">
+                        Yamzz Market
+                    </span>
+                </span>
+
+                <span>
+                    All Rights Reserved.
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =========================
+         WHATSAPP FLOAT
+    ========================== -->
+    <a
+        id="floatingWhatsapp"
+        href="#"
+        target="_blank"
+        class="whatsapp-float"
+        aria-label="WhatsApp"
+    >
+        <i class="fa-brands fa-whatsapp"></i>
+
+        <span>
+            Chat Kami
+        </span>
+    </a>
+
+
+
+    <!-- =========================
+         PRODUCT MODAL
+    ========================== -->
+    <div
+        id="productModal"
+        class="modal"
+        aria-hidden="true"
+    >
+
+        <div class="modal-overlay"></div>
+
+        <div class="modal-content">
+
+            <button
+                type="button"
+                id="closeModal"
+                class="modal-close"
+                aria-label="Tutup"
+            >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+
+            <div
+                id="modalProductImage"
+                class="modal-product-image"
+            >
+                <img
+                    src=""
+                    alt="Produk"
+                    id="modalImage"
+                >
+            </div>
+
+
+            <div class="modal-product-info">
+
+                <span
+                    id="modalCategory"
+                    class="product-category"
+                >
+                    JASTEB
+                </span>
+
+
+                <h2 id="modalProductName">
+                    Nama Produk
+                </h2>
+
+
+                <p id="modalProductDescription">
+                    Deskripsi produk.
+                </p>
+
+
+                <div class="modal-price">
+
+                    <span>
+                        Harga
+                    </span>
+
+                    <strong id="modalPrice">
+                        Rp0
+                    </strong>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="modalBuyButton"
+                    class="btn btn-primary btn-full"
+                >
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Beli Sekarang
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         TOAST
+    ========================== -->
+    <div
+        id="toast"
+        class="toast"
+    >
+
+        <div class="toast-icon">
+            <i class="fa-solid fa-check"></i>
+        </div>
+
+        <div class="toast-content">
+
+            <strong id="toastTitle">
+                Berhasil
+            </strong>
+
+            <span id="toastMessage">
+                Berhasil melakukan aksi.
+            </span>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="js/index.js"></script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const year = document.getElementById("footerYear");
+
+            if (year) {
+                year.textContent = new Date().getFullYear();
+            }
+
+        });
+    </script>
+
+</body>
+</html>
