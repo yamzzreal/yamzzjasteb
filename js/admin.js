@@ -72,7 +72,15 @@ window.Admin={
     app.innerHTML=`
     <div class="admin-layout">
       <aside class="sidebar">
-        <div class="sidebar-brand"><div class="brand-logo">${DB.site.logo?`<img src="${esc(DB.site.logo)}" alt="">`:`<i class="fa-solid fa-bolt"></i>`}</div><div><strong>${esc(DB.site.name)}</strong><small>ADMIN PANEL</small></div></div>
+        <div class="sidebar-brand"><div class="brand-logo">
+    ${
+        DB.site.logo
+        ? `<img src="${esc(DB.site.logo)}"
+               alt="Logo"
+               style="width:42px;height:42px;object-fit:cover;border-radius:13px;display:block;">`
+        : `<i class="fa-solid fa-bolt"></i>`
+    }
+</div><div><strong>${esc(DB.site.name)}</strong><small>ADMIN PANEL</small></div></div>
         <nav class="sidebar-nav">
           <button class="nav-item active" data-section="dashboard" onclick="Admin.open('dashboard',this)"><i class="fa-solid fa-chart-line"></i><span>Dashboard</span></button>
           <button class="nav-item" data-section="products" onclick="Admin.open('products',this)"><i class="fa-solid fa-box"></i><span>Produk</span></button>
