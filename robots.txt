@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Disallow: /admin.html
+Disallow: /admin/
+Disallow: /api/
+
+Sitemap: https://jasteb.yamzzmarket.my.id/sitemap.xml

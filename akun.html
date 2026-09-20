@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#07111f"><meta name="robots" content="noindex,nofollow"><title>Akun • Yamzz Market</title>
+<link rel="icon" href="assets/hero.png"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="css/akun.css">
+</head>
+<body>
+<div class="bg-glow"></div>
+<header class="account-top"><a href="index.html" class="back"><i class="fa-solid fa-arrow-left"></i></a><div><b>Yamzz Market</b><span>Akun Pelanggan</span></div><a href="index.html" class="home"><i class="fa-solid fa-house"></i></a></header>
+<main class="account-wrap">
+  <div id="authView" class="card">
+    <div class="account-logo"><img src="assets/hero.png" alt="Yamzz Market"></div>
+    <div class="tabs"><button id="loginTab" class="active">Login</button><button id="registerTab">Create Akun</button></div>
+    <form id="loginForm">
+      <label>Username / WhatsApp<input id="loginIdentity" autocomplete="username" required placeholder="username atau 628xxxxxxxxxx"></label>
+      <label>Password<input id="loginPassword" type="password" autocomplete="current-password" required placeholder="Minimal 8 karakter"></label>
+      <button class="primary" type="submit"><i class="fa-solid fa-right-to-bracket"></i> Login</button>
+      <p id="loginError" class="error"></p>
+    </form>
+    <form id="registerForm" hidden>
+      <label>Nama<input id="regName" required maxlength="80" placeholder="Nama kamu"></label>
+      <label>Username<input id="regUsername" required maxlength="40" pattern="[a-z0-9_.-]{3,40}" placeholder="yamzz123"></label>
+      <label>WhatsApp<input id="regWhatsapp" required inputmode="numeric" pattern="62[0-9]{8,13}" placeholder="628xxxxxxxxxx"></label>
+      <label>Email <small>(opsional)</small><input id="regEmail" type="email" maxlength="120" placeholder="email@contoh.com"></label>
+      <label>Password<input id="regPassword" type="password" required minlength="8" autocomplete="new-password" placeholder="Minimal 8 karakter"></label>
+      <button class="primary" type="submit"><i class="fa-solid fa-user-plus"></i> Buat Akun</button>
+      <p id="regError" class="error"></p>
+    </form>
+  </div>
+  <div id="profileView" hidden>
+    <section class="profile-card card">
+      <div class="avatar"><i class="fa-solid fa-user"></i></div>
+      <div class="profile-main"><span id="profileType" class="badge">CUSTOMER</span><h1 id="profileName">-</h1><p id="profileMeta">@username • whatsapp</p></div>
+      <button id="logoutBtn" class="ghost"><i class="fa-solid fa-right-from-bracket"></i></button>
+    </section>
+    <section class="card">
+      <div class="section-head"><div><span class="eyebrow">JENIS AKUN</span><h2>Status akun</h2></div></div>
+      <div id="resellerBox" class="reseller-box"></div>
+      <div id="upgradeBox" class="upgrade-box" hidden>
+        <h3><i class="fa-solid fa-crown"></i> Upgrade ke Reseller</h3><p>Bayar biaya upgrade yang ditentukan admin untuk mengubah akun Customer menjadi Reseller.</p>
+        <button id="upgradeBtn" class="primary"><i class="fa-solid fa-qrcode"></i> Bayar Upgrade</button>
+        <div id="upgradePay" hidden></div>
+      </div>
+    </section>
+    <section class="card" id="notifications">
+      <div class="section-head"><div><span class="eyebrow">NOTIFIKASI</span><h2>Aktivitas akun</h2></div><button id="readAll" class="ghost-text">Tandai dibaca</button></div>
+      <div id="notificationList" class="list">Memuat notifikasi...</div>
+    </section>
+    <section class="card">
+      <div class="section-head"><div><span class="eyebrow">CHAT ADMIN</span><h2>Pesan</h2></div></div>
+      <div id="chatList" class="chat-list">Memuat chat...</div>
+      <form id="chatForm" class="chat-form"><input id="chatInput" maxlength="1000" required placeholder="Tulis pesan ke admin..."><button class="primary" type="submit"><i class="fa-solid fa-paper-plane"></i></button></form>
+    </section>
+  </div>
+</main>
+<script src="js/user-auth.js"></script>
+</body></html>

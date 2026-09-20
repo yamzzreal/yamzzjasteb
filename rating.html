@@ -1,0 +1,1172 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#07111f">
+
+<title>Testimoni Pelanggan • Yamzz Market</title>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+  rel="stylesheet"
+>
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+>
+
+<link rel="stylesheet" href="css/index.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2527385325235137"
+     crossorigin="anonymous"></script>
+<style>
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  min-height:100vh;
+  padding:22px;
+  font-family:Inter,system-ui,sans-serif;
+  color:#f2f7ff;
+  background:linear-gradient(145deg,#06111d,#0a1b2b);
+}
+
+.wrap{
+  width:min(820px,100%);
+  margin:auto;
+}
+
+header{
+  text-align:center;
+  margin:10px 0 25px;
+}
+
+header h1{
+  margin:0 0 8px;
+  font-size:28px;
+}
+
+header p{
+  margin:0;
+  color:#91a8bd;
+  font-size:13px;
+}
+
+/* SUMMARY */
+
+.summary,
+.testimonial-card{
+  border:1px solid rgba(100,165,225,.14);
+  border-radius:20px;
+  background:linear-gradient(145deg,#15395d,#0b2034);
+  box-shadow:0 18px 55px rgba(0,0,0,.18);
+}
+
+.summary{
+  text-align:center;
+  padding:22px;
+  margin-bottom:20px;
+}
+
+.total{
+  color:#91a8bd;
+  font-size:12px;
+}
+
+/* TESTIMONI GRID */
+
+#testimonialList{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:10px;
+}
+
+/* CARD */
+
+.testimonial-card{
+  padding:14px;
+  background:rgba(18,42,65,.86);
+  min-width:0;
+  overflow:hidden;
+}
+
+/* TOP */
+
+.top{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  min-width:0;
+}
+
+.avatar{
+  width:38px;
+  height:38px;
+  border-radius:11px;
+  overflow:hidden;
+  flex:0 0 38px;
+  background:#102b45;
+  display:grid;
+  place-items:center;
+}
+
+.avatar img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.avatar i{
+  color:#75baff;
+  font-size:16px;
+}
+
+.name{
+  font-size:12px;
+  font-weight:800;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+
+.date{
+  margin-top:3px;
+  color:#607b92;
+  font-size:9px;
+}
+
+/* MESSAGE */
+
+.message{
+  margin:10px 0 8px;
+  color:#d5e2ee;
+  font-size:11px;
+  line-height:1.55;
+  white-space:pre-wrap;
+  word-break:break-word;
+
+  display:-webkit-box;
+  -webkit-line-clamp:3;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+}
+
+/* IMAGE */
+
+.proof{
+  display:block;
+  width:100%;
+  max-height:180px;
+  object-fit:contain;
+  border-radius:10px;
+  margin-top:8px;
+  background:#07111f;
+  border:1px solid rgba(255,255,255,.06);
+}
+
+/* DETAIL BUTTON */
+
+.detail-btn{
+  width:100%;
+  margin-top:10px;
+  padding:9px 10px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+
+  border:1px solid rgba(117,186,255,.18);
+  border-radius:10px;
+
+  color:#cfe8ff;
+  background:rgba(40,100,155,.18);
+
+  font-family:inherit;
+  font-size:10px;
+  font-weight:700;
+
+  cursor:pointer;
+  transition:.2s ease;
+}
+
+.detail-btn:hover{
+  background:rgba(40,100,155,.35);
+  border-color:rgba(117,186,255,.35);
+  transform:translateY(-1px);
+}
+
+.detail-btn:active{
+  transform:scale(.98);
+}
+
+/* STATE */
+
+.state{
+  grid-column:1 / -1;
+  text-align:center;
+  padding:35px;
+  color:#91a8bd;
+  font-size:13px;
+}
+
+.error{
+  color:#ff9b9b;
+}
+
+/* =========================================
+   DETAIL MODAL
+========================================= */
+
+.testimonial-modal{
+  position:fixed;
+  inset:0;
+  z-index:9999;
+
+  display:none;
+  align-items:center;
+  justify-content:center;
+
+  padding:18px;
+
+  background:rgba(1,7,13,.82);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+}
+
+.testimonial-modal.show{
+  display:flex;
+}
+
+.modal-box{
+  position:relative;
+
+  width:min(620px,100%);
+  max-height:92vh;
+
+  overflow:auto;
+
+  padding:18px;
+
+  border:1px solid rgba(100,165,225,.2);
+  border-radius:20px;
+
+  background:linear-gradient(145deg,#15395d,#0b2034);
+
+  box-shadow:
+    0 25px 80px rgba(0,0,0,.5);
+
+  animation:modalIn .2s ease;
+}
+
+@keyframes modalIn{
+  from{
+    opacity:0;
+    transform:scale(.96) translateY(10px);
+  }
+
+  to{
+    opacity:1;
+    transform:scale(1) translateY(0);
+  }
+}
+
+/* CLOSE */
+
+.modal-close{
+  position:absolute;
+  top:12px;
+  right:12px;
+
+  width:34px;
+  height:34px;
+
+  display:grid;
+  place-items:center;
+
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:50%;
+
+  color:#d9eaff;
+  background:rgba(0,0,0,.3);
+
+  cursor:pointer;
+  z-index:3;
+
+  transition:.2s ease;
+}
+
+.modal-close:hover{
+  background:rgba(255,255,255,.1);
+}
+
+/* MODAL IMAGE */
+
+.modal-image-wrap{
+  width:100%;
+  margin-top:8px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  border-radius:15px;
+
+  background:#050d17;
+
+  border:1px solid rgba(255,255,255,.07);
+
+  overflow:hidden;
+}
+
+.modal-image{
+  display:block;
+
+  width:100%;
+  max-height:65vh;
+
+  object-fit:contain;
+}
+
+/* MODAL INFO */
+
+.modal-info{
+  padding:14px 2px 2px;
+}
+
+.modal-name{
+  font-size:15px;
+  font-weight:800;
+  color:#f2f7ff;
+}
+
+.modal-date{
+  margin-top:4px;
+  color:#607b92;
+  font-size:10px;
+}
+
+.modal-message{
+  margin-top:12px;
+
+  color:#d5e2ee;
+  font-size:12px;
+  line-height:1.7;
+
+  white-space:pre-wrap;
+  word-break:break-word;
+}
+
+/* MODAL WITHOUT IMAGE */
+
+.modal-no-image{
+  min-height:180px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  color:#75baff;
+  font-size:40px;
+}
+
+/* TABLET / HP */
+
+@media(max-width:500px){
+
+  body{
+    padding:14px;
+  }
+
+  header{
+    margin:5px 0 18px;
+  }
+
+  header h1{
+    font-size:23px;
+  }
+
+  header p{
+    font-size:11px;
+  }
+
+  .summary{
+    padding:16px;
+    margin-bottom:14px;
+    border-radius:16px;
+  }
+
+  #testimonialList{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:8px;
+  }
+
+  .testimonial-card{
+    padding:11px;
+    border-radius:15px;
+  }
+
+  .avatar{
+    width:32px;
+    height:32px;
+    flex-basis:32px;
+    border-radius:9px;
+  }
+
+  .avatar i{
+    font-size:14px;
+  }
+
+  .name{
+    font-size:11px;
+  }
+
+  .date{
+    font-size:8px;
+  }
+
+  .message{
+    font-size:10px;
+    line-height:1.5;
+  }
+
+  .proof{
+    max-height:140px;
+  }
+
+  .detail-btn{
+    padding:8px;
+    font-size:9px;
+  }
+
+  .testimonial-modal{
+    padding:10px;
+  }
+
+  .modal-box{
+    padding:12px;
+    border-radius:17px;
+  }
+
+  .modal-image{
+    max-height:65vh;
+  }
+
+  .modal-name{
+    font-size:13px;
+  }
+
+  .modal-message{
+    font-size:11px;
+  }
+}
+
+/* HP KECIL */
+
+@media(max-width:360px){
+
+  body{
+    padding:10px;
+  }
+
+  #testimonialList{
+    gap:6px;
+  }
+
+  .testimonial-card{
+    padding:9px;
+    border-radius:13px;
+  }
+
+  .avatar{
+    width:29px;
+    height:29px;
+    flex-basis:29px;
+  }
+
+  .top{
+    gap:6px;
+  }
+
+  .name{
+    font-size:10px;
+  }
+
+  .date{
+    font-size:7px;
+  }
+
+  .message{
+    font-size:9px;
+  }
+
+  .proof{
+    max-height:120px;
+  }
+
+  .detail-btn{
+    font-size:8px;
+    padding:7px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+
+  <div class="nav-container">
+
+    <a href="index.html" class="brand">
+
+      <div class="brand-logo">
+
+        <img
+          id="navLogo"
+          src="assets/hero.png"
+          alt="Logo"
+        >
+
+      </div>
+
+      <div class="brand-info">
+
+        <strong id="navStoreName">
+          Yamzz Market
+        </strong>
+
+        <span>
+          JASTEB STORE
+        </span>
+
+      </div>
+
+    </a>
+
+    <div class="nav-actions">
+
+      <a
+        id="navWhatsapp"
+        href="#"
+        target="_blank"
+        rel="noopener"
+        class="nav-wa"
+      >
+
+        <i class="fa-brands fa-whatsapp"></i>
+
+        <span>
+          WhatsApp
+        </span>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<!-- LIVE TRANSACTIONS -->
+
+<section
+  class="paid-transactions-section"
+  aria-label="Transaksi berhasil terbaru"
+>
+
+  <div class="container">
+
+    <div
+      class="paid-live-card"
+      id="paidTransactionsCard"
+      hidden
+    >
+
+      <div class="paid-live-head">
+
+        <div class="paid-live-title">
+
+          <span class="paid-live-dot"></span>
+
+          <div>
+
+            <strong>
+              Transaksi Terbaru
+            </strong>
+
+            <span>
+              Aktivitas transaksi terbaru
+            </span>
+
+          </div>
+
+        </div>
+
+        <span class="paid-live-status">
+          <i class="fa-solid fa-bolt"></i>
+          LIVE
+        </span>
+
+      </div>
+
+      <div
+        class="paid-live-track"
+        id="paidTransactionsTrack"
+        aria-live="polite"
+      >
+
+        <div class="paid-live-item paid-live-loading">
+
+          <i class="fa-solid fa-spinner fa-spin"></i>
+          Memuat transaksi...
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- TESTIMONI -->
+
+<main class="wrap">
+
+  <header>
+
+    <h1>
+      <i class="fa-solid fa-comments"></i>
+      Testimoni Pelanggan
+    </h1>
+
+    <p>
+      Pengalaman pelanggan Yamzz Market
+    </p>
+
+  </header>
+
+
+  <section class="summary">
+
+    <div
+      id="total"
+      class="total"
+    >
+      Memuat testimoni...
+    </div>
+
+  </section>
+
+
+  <section id="testimonialList">
+
+    <div class="state">
+      Memuat testimoni...
+    </div>
+
+  </section>
+
+</main>
+
+
+<!-- BOTTOM NAVBAR -->
+
+<nav class="bottom-navbar" aria-label="Navigasi utama">
+<a href="produk" data-page="produk"><i class="fa-solid fa-box"></i><span>Produk</span></a>
+<a href="/" data-page="home"><i class="fa-solid fa-house"></i><span>Home</span></a>
+<a href="cek-transaksi" data-page="trx"><i class="fa-solid fa-magnifying-glass"></i><span>Pesanan</span></a>
+<a href="rating" data-page="rating"><i class="fa-solid fa-comments"></i><span>Testimoni</span></a>
+<a href="tentang" data-page="tentang"><i class="fa-solid fa-circle-info"></i><span>Tentang</span></a>
+</nav>
+
+
+<!-- =========================================
+     DETAIL TESTIMONI MODAL
+========================================= -->
+
+<div
+  id="testimonialModal"
+  class="testimonial-modal"
+  aria-hidden="true"
+>
+
+  <div
+    class="modal-box"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Detail testimoni"
+  >
+
+    <button
+      type="button"
+      class="modal-close"
+      id="modalClose"
+      aria-label="Tutup"
+    >
+
+      <i class="fa-solid fa-xmark"></i>
+
+    </button>
+
+
+    <div
+      id="modalImageWrap"
+      class="modal-image-wrap"
+    >
+
+      <img
+        id="modalImage"
+        class="modal-image"
+        src=""
+        alt="Gambar testimoni"
+      >
+
+    </div>
+
+
+    <div class="modal-info">
+
+      <div
+        id="modalName"
+        class="modal-name"
+      >
+        Pelanggan
+      </div>
+
+      <div
+        id="modalDate"
+        class="modal-date"
+      >
+      </div>
+
+      <div
+        id="modalMessage"
+        class="modal-message"
+      >
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<script>
+
+const esc = v =>
+  String(v ?? "").replace(
+    /[&<>"']/g,
+    m => ({
+      "&":"&amp;",
+      "<":"&lt;",
+      ">":"&gt;",
+      '"':"&quot;",
+      "'":"&#039;"
+    }[m])
+  );
+
+
+const fmtDate = v => {
+
+  if(!v) return "";
+
+  try{
+
+    return new Intl.DateTimeFormat(
+      "id-ID",
+      {
+        dateStyle:"medium"
+      }
+    ).format(
+      new Date(v)
+    );
+
+  }catch{
+
+    return "";
+
+  }
+
+};
+
+
+/* =========================================
+   MODAL
+========================================= */
+
+const modal =
+  document.getElementById("testimonialModal");
+
+const modalClose =
+  document.getElementById("modalClose");
+
+const modalImage =
+  document.getElementById("modalImage");
+
+const modalImageWrap =
+  document.getElementById("modalImageWrap");
+
+const modalName =
+  document.getElementById("modalName");
+
+const modalDate =
+  document.getElementById("modalDate");
+
+const modalMessage =
+  document.getElementById("modalMessage");
+
+
+function openTestimonialDetail(data){
+
+  modalName.textContent =
+    data.name || "Pelanggan";
+
+  modalDate.textContent =
+    fmtDate(data.createdAt);
+
+  modalMessage.textContent =
+    data.message || "";
+
+
+  if(data.image){
+
+    modalImage.src = data.image;
+
+    modalImage.alt =
+      `Gambar testimoni ${data.name || "Pelanggan"}`;
+
+    modalImageWrap.innerHTML = `
+      <img
+        id="modalImage"
+        class="modal-image"
+        src="${esc(data.image)}"
+        alt="Gambar testimoni"
+      >
+    `;
+
+  }else{
+
+    modalImageWrap.innerHTML = `
+      <div class="modal-no-image">
+        <i class="fa-solid fa-comments"></i>
+      </div>
+    `;
+
+  }
+
+
+  modal.classList.add("show");
+
+  modal.setAttribute(
+    "aria-hidden",
+    "false"
+  );
+
+  document.body.style.overflow =
+    "hidden";
+
+}
+
+
+function closeTestimonialDetail(){
+
+  modal.classList.remove("show");
+
+  modal.setAttribute(
+    "aria-hidden",
+    "true"
+  );
+
+  document.body.style.overflow =
+    "";
+
+}
+
+
+/* CLOSE BUTTON */
+
+modalClose.addEventListener(
+  "click",
+  closeTestimonialDetail
+);
+
+
+/* CLICK OUTSIDE */
+
+modal.addEventListener(
+  "click",
+  e => {
+
+    if(e.target === modal){
+
+      closeTestimonialDetail();
+
+    }
+
+  }
+);
+
+
+/* ESC KEY */
+
+document.addEventListener(
+  "keydown",
+  e => {
+
+    if(
+      e.key === "Escape" &&
+      modal.classList.contains("show")
+    ){
+
+      closeTestimonialDetail();
+
+    }
+
+  }
+);
+
+
+/* =========================================
+   LOAD TESTIMONIALS
+========================================= */
+
+async function loadTestimonials(){
+
+  const list =
+    document.getElementById(
+      "testimonialList"
+    );
+
+  const total =
+    document.getElementById(
+      "total"
+    );
+
+
+  try{
+
+    const r =
+      await fetch(
+        "/api/casaku/get-testimonials",
+        {
+          cache:"no-store"
+        }
+      );
+
+
+    const d =
+      await r.json();
+
+
+    if(!r.ok){
+
+      throw new Error(
+        d.error ||
+        "Gagal memuat testimoni."
+      );
+
+    }
+
+
+    const items =
+      Array.isArray(
+        d.testimonials
+      )
+        ? d.testimonials
+        : [];
+
+
+    total.textContent =
+      items.length
+        ? `${items.length} testimoni pelanggan`
+        : "Belum ada testimoni";
+
+
+    if(!items.length){
+
+      list.innerHTML =
+        '<div class="state">Belum ada testimoni pelanggan.</div>';
+
+      return;
+
+    }
+
+
+    list.innerHTML =
+      items.map(
+        (t,index) => `
+
+          <article
+            class="testimonial-card"
+          >
+
+            <div class="top">
+
+              <div class="avatar">
+
+                ${
+                  t.image
+                    ? `
+                      <img
+                        src="${esc(t.image)}"
+                        alt=""
+                      >
+                    `
+                    : `
+                      <i class="fa-solid fa-user"></i>
+                    `
+                }
+
+              </div>
+
+
+              <div>
+
+                <div class="name">
+                  ${esc(
+                    t.name ||
+                    "Pelanggan"
+                  )}
+                </div>
+
+                <div class="date">
+                  ${esc(
+                    fmtDate(
+                      t.createdAt
+                    )
+                  )}
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="message">
+
+              ${esc(
+                t.message ||
+                ""
+              )}
+
+            </div>
+
+
+            ${
+              t.image
+                ? `
+                  <img
+                    class="proof"
+                    src="${esc(t.image)}"
+                    alt="Gambar testimoni"
+                  >
+                `
+                : ""
+            }
+
+
+            <!-- DETAIL BUTTON -->
+
+            <button
+              type="button"
+              class="detail-btn"
+              data-index="${index}"
+            >
+
+              <i class="fa-solid fa-eye"></i>
+
+              Lihat Detail
+
+            </button>
+
+          </article>
+
+        `
+      ).join("");
+
+
+    /* DETAIL BUTTON EVENT */
+
+    list
+      .querySelectorAll(".detail-btn")
+      .forEach(btn => {
+
+        btn.addEventListener(
+          "click",
+          () => {
+
+            const index =
+              Number(
+                btn.dataset.index
+              );
+
+            openTestimonialDetail(
+              items[index]
+            );
+
+          }
+        );
+
+      });
+
+
+  }catch(e){
+
+    console.error(e);
+
+    list.innerHTML = `
+      <div class="state error">
+        ${esc(
+          e.message ||
+          "Gagal memuat testimoni."
+        )}
+      </div>
+    `;
+
+  }
+
+}
+
+
+/* =========================================
+   INIT
+========================================= */
+
+document.addEventListener(
+  "DOMContentLoaded",
+  () => {
+
+    document
+      .querySelectorAll(
+        ".bottom-navbar a"
+      )
+      .forEach(a => {
+
+        a.classList.toggle(
+          "active",
+          a.dataset.page === "rating"
+        );
+
+      });
+
+
+    loadTestimonials();
+
+  }
+);
+
+</script>
+
+</body>
+</html>

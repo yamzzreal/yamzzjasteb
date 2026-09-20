@@ -1,0 +1,37 @@
+{
+  "functions": {
+    "api/**/*.js": {
+      "maxDuration": 10
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/produk",
+      "destination": "/produk.html"
+    },
+    {
+      "source": "/cek-transaksi",
+      "destination": "/cek-transaksi.html"
+    },
+    {
+      "source": "/rating",
+      "destination": "/rating.html"
+    },
+    {
+      "source": "/tentang",
+      "destination": "/tentang.html"
+    },
+    {
+      "source": "/payment",
+      "destination": "/payment.html"
+    },
+    {
+      "source": "/akun",
+      "destination": "/akun.html"
+    }
+  ]
+}
